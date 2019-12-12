@@ -11,7 +11,7 @@ namespace LuckyBastards
 {
     class Program
     {
-        const string FilePath = @"C:\temp\<filnavn>";
+        const string FilePath = @"C:\temp\Azure_Functions_Hello_World__Real_life_usecases.csv";
 
         static readonly TableFormatter Formatter = new TableFormatter(new Hints { CollapseVerticallyWhenSingleLine = true });
 
@@ -28,7 +28,7 @@ namespace LuckyBastards
 
             PrintRows(rows, columns);
 
-            var rowsInRandomOrder = await rows.InRandomOrder();
+            var rowsInRandomOrder = await rows.InRandomOrderAsync();
 
             using (var enumerator = rowsInRandomOrder.GetEnumerator())
             {
